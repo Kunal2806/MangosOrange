@@ -1,9 +1,15 @@
+import Home from "./component/Home"
 import Nav from "./component/Nav"
 
 const App = () => {
   return (
     <div className="min-h-screen w-screen">
-      <Nav/>
+      <div className="fixed">
+        <Nav/>
+      </div>
+      <div id="home">
+        <Home/>
+      </div>
     </div>
   )
 }
