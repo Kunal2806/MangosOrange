@@ -1,4 +1,3 @@
-import About from "./component/About"
 import Contact from "./component/Contact"
 import Footer from "./component/Footer"
 import Home from "./component/Home"
@@ -16,9 +15,6 @@ const App = () => {
       </div>
       <div id="services">
         <Services/>
-      </div>
-      <div id="about" className="pt-[200px]">
-        <About/>
       </div>
       <div id="contact" className="pt-[80px]">
         <Contact/>

@@ -2,6 +2,11 @@ import { useState } from "react";
 
 const Nav = () => {
 
+  const [navMenu, setNavMenu] = useState('home');
+  const handleNavMenu = (id:string) => {
+    setNavMenu(id);
+  }
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleButton = () =>{
@@ -26,21 +31,19 @@ const Nav = () => {
       {
         isOpen &&
           <div className=" xl:hidden absolute span-cursor-pointer flex flex-col justify-start right-[50px] top-[100px] gap-y-10 shadow-2xl w-[80%] py-20 pl-10 rounded-4xl bg-white">
-            <a href="#home"><span>Home</span></a>
-            <a href="#services"><span>Services</span></a>
-            <a href="#about"><span>About</span></a>
-            <a href="#contact"><span>Contact</span></a>
-            <a href="requestDemo"><span>Request Demo</span></a>
+            <a href="#home" onClick={()=>{handleNavMenu('home')}}><span className={navMenu=="home" ? "text-[#EB6703] border-b-1": ""}>Home</span></a>
+            <a href="#services" onClick={()=>{handleNavMenu("services")}}><span className={navMenu=="services" ? "text-[#EB6703] border-b-1": ""}>Services</span></a>
+            <a href="#contact" onClick={()=>{handleNavMenu("contact")}}><span className={navMenu=="contact" ? "text-[#EB6703] border-b-1": ""}>Contact</span></a>
+            <a href="#requestDemo" onClick={()=>{handleNavMenu('requestDemo')}}><span className={navMenu=="requestDemo" ? "text-[#EB6703] border-b-1": ""}>Request Demo</span></a>
         </div>
       }
       
 
-      <div className="hidden span-cursor-pointer w-[619px] h-full xl:flex items-center justify-between">
-        <a href="#home"><span>Home</span></a>
-        <a href="#services"><span>Services</span></a>
-        <a href="#about"><span>About</span></a>
-        <a href="#contact"><span>Contact</span></a>
-        <a href="#requestDemo"><span className="py-2 px-4 bg-[#EB6703] text-white rounded-xl hover:bg-transparent border-2 border-[#EB6703]">Request Demo</span></a>
+      <div className="hidden span-cursor-pointer w-[550px] h-full xl:flex items-center justify-between">
+        <a href="#home" onClick={()=>{handleNavMenu('home')}}><span className={navMenu=="home" ? "text-[#EB6703] border-b-1": ""}>Home</span></a>
+        <a href="#services" onClick={()=>{handleNavMenu("services")}}><span className={navMenu=="services" ? "text-[#EB6703] border-b-1": ""}>Services</span></a>
+        <a href="#contact" onClick={()=>{handleNavMenu("contact")}}><span className={navMenu=="contact" ? "text-[#EB6703] border-b-1": ""}>Contact</span></a>
+        <a href="#requestDemo" onClick={()=>{handleNavMenu("requestDemo")}}><span className="py-2 px-4 bg-[#EB6703] text-white rounded-xl hover:bg-transparent border-2 border-[#EB6703]">Request Demo</span></a>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 
 const Home = () => {
   return (
-    <div className="w-screen flex flex-col lg:flex-row justify-evenly items-center p-10 bg-[#fef0e7] ">
+    <div className="w-screen flex flex-col text-center lg:text-start lg:flex-row justify-evenly items-center p-10 bg-[#fef0e7] ">
       <div >
         <div>
           <div>
@@ -13,13 +13,13 @@ const Home = () => {
               <span className="py-2 px-4 bg-[#EB6703] text-white rounded-md hover:bg-transparent hover:text-[#EB6703] border-2 border-[#EB6703]">Request Demo</span>
             </a>
             <a href="#ourServices ">
-              <span className="m-6 py-2 px-4 hover:bg-[#EB6703] hover:text-white rounded-md bg-transparent text-[#EB6703] border-2 hover:border-[#EB6703]">Our Servicers</span>
+              <span className="m-6 py-2 px-4 bg-transparent  rounded-md hover:bg-white text-[#EB6703] border-2 border-[#EB6703]">Our Servicers</span>
             </a>
           </div>
         </div>
       </div>
-      <div className="lg:flex items-center hidden ">
-        <img src="./images/googlePartners.png" alt="Google Partner" />
+      <div className="flex items-center ">
+        <img className="rounded-2xl" src="./images/Google-Partner-Banner.gif" alt="Google Partner" />
       </div>
     </div>
   )

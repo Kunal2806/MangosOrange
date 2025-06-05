@@ -8,14 +8,15 @@ const Services = () => {
     }
 
   return (
-    <div className="h-dvh w-screen flex items-center flex-col p-[180px] font-poppins">
+    <div className="h-dvh w-screen flex items-center flex-col p-[100px] lg:p-[180px] font-poppins">
         <div>
-            <p className="text-[30px] font-bold">Our <span className="text-[#EB6703]">Google Solutions </span>for Education</p>
+            <p className="text-[30px] font-bold text-center "><span className="text-[#EB6703]">Google Solutions </span>for Education</p>
             <p className="text-center text-sm font-light">We provide comprehensive Google solutions tailored specially for schools,<br/>
             colleges, and universities.</p>
         </div>
-        <div className="span-cursor-pointer w-[1200px] lg:mt-40 lg:gap-x-30 flex items-center justify-center shadow-xl">
-            <a onClick={()=>selectGoogleOpt("workspace")}><span>Google Workspace</span></a>
+        <div className="text-[11px] lg:text-lg span-cursor-pointer w-[1200px] mt-40 gap-x-5 lg:gap-x-30 flex items-center justify-center shadow-xl">
+            <a onClick={()=>selectGoogleOpt("workspace")} className="flex ">
+                <span>Google Workspace</span></a>
             <a onClick={()=>selectGoogleOpt("chromeOs")} ><span>Chrome OS</span></a>
             <a onClick={()=>selectGoogleOpt("cloud")}><span>Google Cloud</span></a>
             <a onClick={()=>selectGoogleOpt("gemini")}><span>Google Gemini</span></a>
