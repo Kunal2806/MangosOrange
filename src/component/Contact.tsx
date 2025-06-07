@@ -1,15 +1,14 @@
 
 const Contact = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-0 bg-white max-w-7xl mx-auto rounded-xl overflow-hidden shadow">
-      <div className="bg-orange-600 text-white p-8">
-        <h2 className="text-2xl font-bold mb-4">Ask your Queries or Request a Demo</h2>
-        <p className="mb-6">
+    <div className=" bg-orange-600 grid md:grid-cols-2 gap-0 max-w-7xl mx-auto rounded-xl overflow-hidden shadow items-center">
+      <div className=" text-white p-8">
+        <h2 className="text-5xl font-bold mb-16">Ask your Queries <br/> or Request a Demo</h2>
+        <p className="mb-6 text-lg">
           Ready to transform your institution with Google's education technology? Schedule a personalized demo with our experts.
         </p>
         <ul className="space-y-4 text-white text-sm">
           <li className="flex items-start">
-            <span className="text-white font-bold mr-2">✔</span>
             <div>
               <strong>Personalized Consultation</strong><br />
               Tailored to your institution's needs

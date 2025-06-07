@@ -2,11 +2,11 @@
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
+      <div className="max-w-7xl mx-auto flex md:grid-cols-4 gap-8 px-6 justify-between">
 
         <div>
           <img src="./images/MOLogo.png" alt="MangosOrange Logo" className="mb-4 w-40" />
-          <p className="mb-4">Empowering education through innovative Google technology solutions.</p>
+          <p className="mb-4">Empowering education through <br></br>innovative Google technology solutions.</p>
           
         </div>
 
@@ -33,13 +33,13 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-3">Newsletter</h4>
-          <p className="mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+          <h4 className="text-white font-bold mb-3">Contact US</h4>
+          <p className="mb-4">Ask Your Query</p>
           <div className="flex">
             <input
               type="email"
               placeholder="Your email"
-              className="w-full p-2 rounded-l-md text-gray-800"
+              className="w-full p-2 rounded-l-md text-white"
             />
             <button className="bg-orange-600 hover:bg-orange-700 px-4 rounded-r-md text-white">
               ➤

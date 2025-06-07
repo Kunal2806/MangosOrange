@@ -8,28 +8,28 @@ const Services = () => {
     }
 
   return (
-    <div className="h-dvh w-screen flex items-center flex-col p-[100px] lg:p-[180px] font-poppins">
+    <div className="w-screen flex items-center flex-col pt-[100px] lg:pt-[180px] font-poppins">
         <div>
-            <p className="text-[30px] font-bold text-center "><span className="text-[#EB6703]">Google Solutions </span>for Education</p>
-            <p className="text-center text-sm font-light">We provide comprehensive Google solutions tailored specially for schools,<br/>
+            <p className="text-[50px] font-bold text-center "><span className="text-[#EB6703]">Google Solutions </span>for Education</p>
+            <p className="text-center text-md font-light">We provide comprehensive Google solutions tailored specially for schools,<br/>
             colleges, and universities.</p>
         </div>
-        <div className="text-[11px] lg:text-lg span-cursor-pointer w-[1200px] mt-40 gap-x-5 lg:gap-x-30 flex items-center justify-center shadow-xl">
+        <div className="text-[11px] lg:text-xl span-cursor-pointer w-[1500px] mt-15 gap-x-5 lg:gap-x-30 flex items-center justify-center shadow-xl">
             <a onClick={()=>selectGoogleOpt("workspace")} className="flex ">
-                <span>Google Workspace</span></a>
-            <a onClick={()=>selectGoogleOpt("chromeOs")} ><span>Chrome OS</span></a>
-            <a onClick={()=>selectGoogleOpt("cloud")}><span>Google Cloud</span></a>
-            <a onClick={()=>selectGoogleOpt("gemini")}><span>Google Gemini</span></a>
-            <a onClick={()=>selectGoogleOpt("customSolutions")} ><span>Custom Solutions</span></a>
+                <span className={googleNav=="workspace" ? "text-[#EB6703] border-b-1": ""}>Google Workspace</span></a>
+            <a onClick={()=>selectGoogleOpt("chromeOs")} ><span className={googleNav=="chromeOs" ? "text-[#EB6703] border-b-1": ""}>Chrome OS</span></a>
+            <a onClick={()=>selectGoogleOpt("cloud")}><span className={googleNav=="cloud" ? "text-[#EB6703] border-b-1": ""}>Google Cloud</span></a>
+            <a onClick={()=>selectGoogleOpt("gemini")}><span className={googleNav=="gemini" ? "text-[#EB6703] border-b-1": ""}>Google Gemini</span></a>
+            <a onClick={()=>selectGoogleOpt("customSolutions")} ><span className={googleNav=="customSolutions" ? "text-[#EB6703] border-b-1": ""}>Custom Solutions</span></a>
         </div>
-        <div className="w-screen flex justify-evenly m-20">
+        <div className=" flex flex-col lg:flex-row items-center justify-center m-20 w-[1160px]">
             {
                 googleNav == "workspace" &&
-                <>
-                    <div>
-                    <p className="text-2xl font-bold">Google Workspace for Education</p>
-                    <p className="text-sm my-3">Transform teaching and learning with collaborative tools that enable <br/>
-                    anywhere, anytime learning and seamless communication between<br/>
+                <div className="flex justify-between w-full h-[372px]">
+                    <div className="flex flex-col justify-between size-full">
+                    <p className="text-3xl font-bold">Google Workspace for Education</p>
+                    <p className="text-md my-8">Transform teaching and learning with collaborative tools that enable <br/>
+                    anywhere, anytime ldearning and seamless communication between<br/>
                     eduactora and students.</p>
                     <div >
                         <ul className="mb-4">
@@ -57,17 +57,17 @@ const Services = () => {
                     </div>
                     <div>
                         <img
-                        className="flex items-center h-[200px]"
+                        className="flex items-center h-full"
                         src="/images/workspace.gif"></img>
                     </div>
-                </>
+                </div>
 }
 {
                 googleNav == "chromeOs" &&
-                <>
-                    <div>
-                    <p className="text-2xl font-bold">Chrome OS for Education</p>
-                    <p className="text-sm my-3">Secure, fast, and easy-to-manage devices that are perfect for the<br/>
+                <div className="flex justify-between w-full h-[372px]">
+                    <div className="flex flex-col justify-between size-full">
+                    <p className="text-3xl font-bold">Chrome OS for Education</p>
+                    <p className="text-md my-8">Secure, fast, and easy-to-manage devices that are perfect for the<br/>
                     classroom environment with built-in accessiability features and centralized<br/>
                     management.</p>
                     <div >
@@ -96,16 +96,16 @@ const Services = () => {
                     </div>
                     <div>
                         <img
-                        className="flex items-center h-[200px]"
-                        src="/images/workspace.gif"></img>
+                        className="flex items-center h-[300px]"
+                        src="/images/chromeOS.gif"></img>
                     </div>
-                </>
+                </div>
 }{
                 googleNav == "cloud" &&
-                <>
-                    <div>
-                    <p className="text-2xl font-bold">Google Cloud for Education</p>
-                    <p className="text-sm my-3">Scalable infrastructure and powerful data analytics to support your <br/>
+                <div className="flex justify-between w-full h-[372px]"> 
+                    <div className="flex flex-col justify-between size-full">
+                    <p className="text-3xl font-bold">Google Cloud for Education</p>
+                    <p className="text-md my-8">Scalable infrastructure and powerful data analytics to support your <br/>
                     institution's digital transformation and research initiatives<br/></p>
                     <div >
                         <ul className="mb-4">
@@ -133,17 +133,17 @@ const Services = () => {
                     </div>
                     <div>
                         <img
-                        className="flex items-center h-[200px]"
-                        src="/images/workspace.gif"></img>
+                        className="flex items-center h-[300px]"
+                        src="/images/cloud.gif"></img>
                     </div>
-                </> 
+                </div> 
                 
 }{
                 googleNav == "gemini" &&
-                <>
-                    <div>
-                    <p className="text-2xl font-bold">Google Gemini for Education</p>
-                    <p className="text-sm my-3">AI-powered personalized learning experience that abapt to each<br/>
+                <div className="flex justify-between w-full h-[372px]">
+                    <div className="flex flex-col justify-between size-full">
+                    <p className="text-3xl font-bold">Google Gemini for Education</p>
+                    <p className="text-md my-8">AI-powered personalized learning experience that abapt to each<br/>
                     student's needs and automate administrative tasksfor educatoors.<br/></p>
                     <div >
                         <ul className="mb-4">
@@ -171,17 +171,17 @@ const Services = () => {
                     </div>
                     <div>
                         <img
-                        className="flex items-center h-[200px]"
-                        src="/images/workspace.gif"></img>
+                        className="flex items-center h-[300px]"
+                        src="/images/gemini.gif"></img>
                     </div>
-                </> 
+                </div> 
                 
 }{                  
                 googleNav == "customSolutions" &&
-                <>
-                    <div>
-                    <p className="text-2xl font-bold">Custom Google Solutions</p>
-                    <p className="text-sm my-3">Tailored integrations and custom development to extend Google's<br/>
+                <div className="flex justify-between w-full h-[372px]">
+                    <div className="flex flex-col justify-between size-full">
+                    <p className="text-3xl font-bold">Custom Google Solutions</p>
+                    <p className="text-md my-8">Tailored integrations and custom development to extend Google's<br/>
                     capability for your specific educational needs<br/>
                     eduactora and students.</p>
                     <div >
@@ -210,10 +210,10 @@ const Services = () => {
                     </div>
                     <div>
                         <img
-                        className="flex items-center h-[200px]"
-                        src="/images/workspace.gif"></img>
+                        className="flex items-center h-[300px]"
+                        src="/images/customSolutions.gif"></img>
                     </div>
-                </>
+                </div>
 }
         </div>
         

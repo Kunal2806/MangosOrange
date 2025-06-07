@@ -13,7 +13,7 @@ const App = () => {
       <div id="home" className="pt-[80px]">
         <Home/>
       </div>
-      <div id="services">
+      <div id="services" >
         <Services/>
       </div>
       <div id="contact" className="pt-[80px]">
